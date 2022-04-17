@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Study/Android/intentfilter/src/main/res/layout/activity_main.xml" value="0.2418478260869565" />
         <entry key="..\:/Study/Android/practice1/task5/src/main/res/layout-land/second_activity.xml" value="0.1" />
         <entry key="..\:/Study/Android/practice1/task5/src/main/res/layout/second_activity.xml" value="0.1" />
         <entry key="..\:/Study/Android/practice1/task6/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -11,6 +12,15 @@
         <entry key="..\:/Study/Android/practice1/tasksbefore5/src/main/res/layout/linear_layout.xml" value="0.1" />
         <entry key="..\:/Study/Android/practice1/tasksbefore5/src/main/res/layout/relative_layout.xml" value="0.1" />
         <entry key="..\:/Study/Android/practice1/tasksbefore5/src/main/res/layout/table_layout.xml" value="0.1" />
+        <entry key="..\:/Study/Android/practice2/dialog/src/main/res/layout/activity_main.xml" value="0.20697463768115942" />
+        <entry key="..\:/Study/Android/practice2/intentfilter/src/main/res/layout/activity_main.xml" value="0.2418478260869565" />
+        <entry key="..\:/Study/Android/practice2/lifecycleactivity/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Study/Android/practice2/multiactivity/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Study/Android/practice2/multiactivity/src/main/res/layout/activity_second.xml" value="0.25" />
+        <entry key="..\:/Study/Android/practice2/multiactivity/src/main/res/layout/fragment_first.xml" value="0.21041666666666667" />
+        <entry key="..\:/Study/Android/practice2/multiactivity/src/main/res/layout/fragment_second.xml" value="0.21041666666666667" />
+        <entry key="..\:/Study/Android/practice2/notificationapp/src/main/res/layout/activity_main.xml" value="0.276268115942029" />
+        <entry key="..\:/Study/Android/practice2/toastapp/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
   </component>

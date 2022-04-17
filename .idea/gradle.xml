@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -15,6 +16,13 @@
             <option value="$PROJECT_DIR$/practice1/task6" />
             <option value="$PROJECT_DIR$/practice1/task7" />
             <option value="$PROJECT_DIR$/practice1/tasksbefore5" />
+            <option value="$PROJECT_DIR$/practice2" />
+            <option value="$PROJECT_DIR$/practice2/dialog" />
+            <option value="$PROJECT_DIR$/practice2/intentfilter" />
+            <option value="$PROJECT_DIR$/practice2/lifecycleactivity" />
+            <option value="$PROJECT_DIR$/practice2/multiactivity" />
+            <option value="$PROJECT_DIR$/practice2/notificationapp" />
+            <option value="$PROJECT_DIR$/practice2/toastapp" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
