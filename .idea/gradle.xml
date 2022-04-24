@@ -23,6 +23,12 @@
             <option value="$PROJECT_DIR$/practice2/multiactivity" />
             <option value="$PROJECT_DIR$/practice2/notificationapp" />
             <option value="$PROJECT_DIR$/practice2/toastapp" />
+            <option value="$PROJECT_DIR$/practice3" />
+            <option value="$PROJECT_DIR$/practice3/intentapp" />
+            <option value="$PROJECT_DIR$/practice3/resultactivity" />
+            <option value="$PROJECT_DIR$/practice3/share" />
+            <option value="$PROJECT_DIR$/practice3/simplefragmentapp" />
+            <option value="$PROJECT_DIR$/practice3/systemintentsapp" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
