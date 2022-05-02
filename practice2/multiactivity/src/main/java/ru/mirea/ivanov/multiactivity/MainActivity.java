@@ -2,9 +2,11 @@ package ru.mirea.ivanov.multiactivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.i(TAG, "onCreate");
         setContentView(R.layout.activity_main);
+        ((TextView)findViewById(R.id.textView2)).setText((String) getIntent().getSerializableExtra("key"));
     }
 
     public void onClickNewActivity(View view) {

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">task6</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="button">Button</string>
 </resources>

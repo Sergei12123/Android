@@ -3,10 +3,11 @@ package ru.mirea.ivanov.resultactivity;
 import static ru.mirea.ivanov.resultactivity.Constants.EXTRA_MESS_NAME;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DataActivity extends AppCompatActivity {
 

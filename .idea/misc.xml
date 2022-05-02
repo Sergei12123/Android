@@ -4,9 +4,26 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Study/Android/intentfilter/src/main/res/layout/activity_main.xml" value="0.2418478260869565" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/drawable/ic_menu_camera.xml" value="0.1" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/drawable/ic_menu_gallery.xml" value="0.1" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/activity_main.xml" value="0.20471014492753623" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/app_bar_main.xml" value="0.20471014492753623" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/calculator_fragment.xml" value="0.2115036231884058" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/content_main.xml" value="0.18072916666666666" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_browser.xml" value="0.25" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_gallery.xml" value="0.20471014492753623" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_home.xml" value="0.20471014492753623" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_music_player.xml" value="0.33" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_slideshow.xml" value="0.20471014492753623" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/nav_header_main.xml" value="0.20471014492753623" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/menu/activity_main_drawer.xml" value="0.3" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/menu/main.xml" value="0.3" />
         <entry key="..\:/Study/Android/practice1/task5/src/main/res/layout-land/second_activity.xml" value="0.1" />
+        <entry key="..\:/Study/Android/practice1/task5/src/main/res/layout/activity_main.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/practice1/task5/src/main/res/layout/second_activity.xml" value="0.1" />
-        <entry key="..\:/Study/Android/practice1/task6/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Study/Android/practice1/task6/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Study/Android/practice1/task7/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Study/Android/practice1/tasksbefore5/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
         <entry key="..\:/Study/Android/practice1/tasksbefore5/src/main/res/layout/linear_layout.xml" value="0.1" />
@@ -15,8 +32,9 @@
         <entry key="..\:/Study/Android/practice2/dialog/src/main/res/layout/activity_main.xml" value="0.20697463768115942" />
         <entry key="..\:/Study/Android/practice2/intentfilter/src/main/res/layout/activity_main.xml" value="0.2418478260869565" />
         <entry key="..\:/Study/Android/practice2/lifecycleactivity/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Study/Android/practice2/multiactivity/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Study/Android/practice2/multiactivity/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Study/Android/practice2/multiactivity/src/main/res/layout/activity_second.xml" value="0.25" />
+        <entry key="..\:/Study/Android/practice2/multiactivity/src/main/res/layout/content_second.xml" value="0.12604166666666666" />
         <entry key="..\:/Study/Android/practice2/multiactivity/src/main/res/layout/fragment_first.xml" value="0.21041666666666667" />
         <entry key="..\:/Study/Android/practice2/multiactivity/src/main/res/layout/fragment_second.xml" value="0.21041666666666667" />
         <entry key="..\:/Study/Android/practice2/notificationapp/src/main/res/layout/activity_main.xml" value="0.276268115942029" />
@@ -31,6 +49,11 @@
         <entry key="..\:/Study/Android/practice3/simplefragmentapp/src/main/res/layout/fragment_1.xml" value="0.22916666666666666" />
         <entry key="..\:/Study/Android/practice3/simplefragmentapp/src/main/res/layout/fragment_2.xml" value="0.2346014492753623" />
         <entry key="..\:/Study/Android/practice3/systemintentsapp/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Study/Android/practice4/data_thread/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Study/Android/practice4/loadermanger/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Study/Android/practice4/looper/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Study/Android/practice4/thread/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Study/Android/practice4/workmanager/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>

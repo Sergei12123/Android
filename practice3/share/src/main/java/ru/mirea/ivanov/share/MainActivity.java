@@ -1,12 +1,10 @@
 package ru.mirea.ivanov.share;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(android.content.Intent.ACTION_SEND);
         intent.setType("*/*");
         intent.putExtra(Intent.EXTRA_TEXT, "Mirea");
-        startActivity(Intent.createChooser(intent,  "Выбор за вами!"));
+        startActivity(Intent.createChooser(intent, "Выбор за вами!"));
     }
 
 }

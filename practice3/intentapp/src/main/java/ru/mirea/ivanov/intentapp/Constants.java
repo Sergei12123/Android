@@ -1,7 +1,5 @@
 package ru.mirea.ivanov.intentapp;
 
-import android.support.annotation.NonNull;
-
 public enum Constants {
 
     EXTRA_MESS_NAME("msgDateString");

@@ -11,6 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/mireaproject" />
             <option value="$PROJECT_DIR$/practice1" />
             <option value="$PROJECT_DIR$/practice1/task5" />
             <option value="$PROJECT_DIR$/practice1/task6" />
@@ -29,6 +30,12 @@
             <option value="$PROJECT_DIR$/practice3/share" />
             <option value="$PROJECT_DIR$/practice3/simplefragmentapp" />
             <option value="$PROJECT_DIR$/practice3/systemintentsapp" />
+            <option value="$PROJECT_DIR$/practice4" />
+            <option value="$PROJECT_DIR$/practice4/data_thread" />
+            <option value="$PROJECT_DIR$/practice4/loadermanger" />
+            <option value="$PROJECT_DIR$/practice4/looper" />
+            <option value="$PROJECT_DIR$/practice4/thread" />
+            <option value="$PROJECT_DIR$/practice4/workmanager" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,16 +1,13 @@
 package ru.mirea.ivanov.multiactivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import ru.mirea.ivanov.multiactivity.databinding.ActivitySecondBinding;
 
@@ -61,23 +58,13 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i(TAG, "onCreate2");
-        binding = ActivitySecondBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        setSupportActionBar(binding.toolbar);
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_second);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        binding.fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show());
-        TextView view = findViewById(R.id.txtView);
-        String text = (String) getIntent().getSerializableExtra("key");
-        view.setText(text);
+        setContentView(R.layout.activity_second);
+        ((TextView)findViewById(R.id.textView)).setText((String) getIntent().getSerializableExtra("key"));
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_second);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+    public void onClick(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("key", "Возвращаемся на первую активити");
+        startActivity(intent);
     }
 }

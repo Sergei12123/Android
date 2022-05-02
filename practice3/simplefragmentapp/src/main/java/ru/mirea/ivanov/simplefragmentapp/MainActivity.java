@@ -1,10 +1,11 @@
 package ru.mirea.ivanov.simplefragmentapp;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void fragmentBtnClicked(View view) {
         fragmentManager = getSupportFragmentManager();
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btnFragment1:
                 fragmentManager.beginTransaction().replace(
                         R.id.fragmentContainer,

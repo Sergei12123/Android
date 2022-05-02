@@ -2,9 +2,10 @@ package ru.mirea.ivanov.intentapp;
 
 import static ru.mirea.ivanov.intentapp.Constants.EXTRA_MESS_NAME;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SecondActivity extends AppCompatActivity {
 

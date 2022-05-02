@@ -3,9 +3,10 @@ package ru.mirea.ivanov.intentapp;
 import static ru.mirea.ivanov.intentapp.Constants.EXTRA_MESS_NAME;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
