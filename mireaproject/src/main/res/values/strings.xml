@@ -16,6 +16,7 @@
     <string name="calc">Calculator</string>
     <string name="music">Music Player</string>
     <string name="play">Play</string>
+    <string name="sensors">Sensors</string>
     <string name="string_play" />
 
 </resources>

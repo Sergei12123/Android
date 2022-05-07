@@ -36,6 +36,11 @@
             <option value="$PROJECT_DIR$/practice4/looper" />
             <option value="$PROJECT_DIR$/practice4/thread" />
             <option value="$PROJECT_DIR$/practice4/workmanager" />
+            <option value="$PROJECT_DIR$/practice5" />
+            <option value="$PROJECT_DIR$/practice5/accelerometer" />
+            <option value="$PROJECT_DIR$/practice5/audiorecord" />
+            <option value="$PROJECT_DIR$/practice5/camera" />
+            <option value="$PROJECT_DIR$/practice5/sensorlist" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

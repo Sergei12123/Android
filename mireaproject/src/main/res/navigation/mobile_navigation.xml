@@ -3,25 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
-    <fragment
-        android:id="@+id/nav_home"
-        android:name="ru.mirea.ivanov.mireaproject.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="ru.mirea.ivanov.mireaproject.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="ru.mirea.ivanov.mireaproject.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+    app:startDestination="@+id/nav_browser">
 
     <fragment
         android:id="@+id/nav_browser"
@@ -40,4 +22,10 @@
         android:name="ru.mirea.ivanov.mireaproject.ui.musicplayer.MusicPlayerFragment"
         android:label="@string/music"
         tools:layout="@layout/fragment_music_player" />
+
+    <fragment
+        android:id="@+id/nav_sensors"
+        android:name="ru.mirea.ivanov.mireaproject.ui.sensors.SensorsFragment"
+        android:label="@string/sensors"
+        tools:layout="@layout/fragment_sensors" />
 </navigation>

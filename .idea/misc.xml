@@ -16,10 +16,12 @@
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_gallery.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_home.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_music_player.xml" value="0.33" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_sensors.xml" value="0.22" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_slideshow.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/nav_header_main.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/menu/activity_main_drawer.xml" value="0.3" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/menu/main.xml" value="0.3" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/xml/filepaths.xml" value="0.17798913043478262" />
         <entry key="..\:/Study/Android/practice1/task5/src/main/res/layout-land/second_activity.xml" value="0.1" />
         <entry key="..\:/Study/Android/practice1/task5/src/main/res/layout/activity_main.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/practice1/task5/src/main/res/layout/second_activity.xml" value="0.1" />
@@ -54,6 +56,11 @@
         <entry key="..\:/Study/Android/practice4/looper/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Study/Android/practice4/thread/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Study/Android/practice4/workmanager/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Study/Android/practice5/accelerometer/src/main/res/layout/activity_main.xml" value="0.2848731884057971" />
+        <entry key="..\:/Study/Android/practice5/audiorecord/src/main/res/layout/activity_main.xml" value="0.17798913043478262" />
+        <entry key="..\:/Study/Android/practice5/camera/src/main/res/layout/activity_main.xml" value="0.14722222222222223" />
+        <entry key="..\:/Study/Android/practice5/camera/src/main/res/xml/paths.xml" value="0.17831813576494426" />
+        <entry key="..\:/Study/Android/practice5/sensorlist/src/main/res/layout/activity_main.xml" value="0.2056159420289855" />
       </map>
     </option>
   </component>
