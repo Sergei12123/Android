@@ -1,5 +1,7 @@
 package ru.mirea.ivanov.mireaproject.ui.musicplayer;
 
+import static ru.mirea.ivanov.mireaproject.MainActivity.preferences;
+
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -23,7 +25,7 @@ public class PlayerService extends Service {
     @Override
     public void onCreate(){
         mediaPlayer=MediaPlayer.create(this, R.raw.music);
-        mediaPlayer.setLooping(true);
+        mediaPlayer.setLooping(preferences.getBoolean("SAVED_LOOPING_AUDIO", false));
     }
     @Override
     public int onStartCommand(Intent intent, int flags, int startId){

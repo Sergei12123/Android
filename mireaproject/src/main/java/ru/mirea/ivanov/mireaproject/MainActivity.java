@@ -4,6 +4,7 @@ import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -34,12 +35,12 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
 import java.io.IOException;
 
 import ru.mirea.ivanov.mireaproject.databinding.ActivityMainBinding;
+import ru.mirea.ivanov.mireaproject.ui.history.NewHistory;
 import ru.mirea.ivanov.mireaproject.ui.musicplayer.PlayerService;
 import ru.mirea.ivanov.mireaproject.ui.sensors.PlayRecordService;
 import ru.mirea.ivanov.mireaproject.ui.sensors.SensorsFragment;
@@ -62,10 +63,22 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private String audioPath;
     private Uri audioUri;
     private MediaPlayer mediaPlayer;
+    private long numberOfRecord;
+
+    public static SharedPreferences preferences;
+
+    final String SAVED_LOOPING_AUDIO = "SAVED_LOOPING_AUDIO";
+
+    final String SAVED_ADDRESS = "SAVED_ADDRESS";
+
+    final String SAVED_CALCULATE_WRONG = "SAVED_CALCULATE_WRONG";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        preferences = getPreferences(MODE_PRIVATE);
+
         mediaRecorder = new MediaRecorder();
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -79,9 +92,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         sensorManager.registerListener(this, accelerometerSensor,
                 SensorManager.SENSOR_DELAY_NORMAL);
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(view ->
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show());
+
+
+        binding.appBarMain.fab.setOnClickListener(view -> startActivity(new Intent(this, NewHistory.class)));
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
 
@@ -90,7 +104,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 R.id.nav_browser,
                 R.id.nav_calculator,
                 R.id.nav_music_player,
-                R.id.nav_sensors)
+                R.id.nav_sensors,
+                R.id.nav_settings,
+                R.id.nav_history)
                 .setOpenableLayout(drawer)
                 .build();
 
@@ -187,6 +203,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     // нажатие на кнопку старт
     public void onRecordStart(View view) {
+        numberOfRecord = System.currentTimeMillis();
         try {
             startRecording();
         } catch (Exception e) {
@@ -205,17 +222,13 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         if (Environment.MEDIA_MOUNTED.equals(state) ||
                 Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
             Log.d(TAG, "sd-card success");
-            // выбор источника звука
             mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-            // выбор формата данных
             mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-            // выбор кодека
             mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-            audioPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/mirea.3gp";
+            audioPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/mirea"+numberOfRecord+".3gp";
             if (audioFile == null) {
-                // создание файла
                 audioFile = new File(this.getExternalFilesDir(
-                        Environment.DIRECTORY_MUSIC), "mirea2.3gp");
+                        Environment.DIRECTORY_MUSIC), "mirea"+numberOfRecord+".3gp");
             }
             mediaRecorder.setOutputFile(audioFile.getAbsolutePath());
             mediaRecorder.prepare();
@@ -240,32 +253,23 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         Log.d(TAG, "processAudioFile");
         ContentValues values = new ContentValues(4);
         long current = System.currentTimeMillis();
-        // установка meta данных созданному файлу
-        values.put(MediaStore.Audio.Media.TITLE, "audio2" + audioFile.getName());
+        values.put(MediaStore.Audio.Media.TITLE, "audio"+numberOfRecord + audioFile.getName());
         values.put(MediaStore.Audio.Media.DATE_ADDED, (int) (current / 1000));
         values.put(MediaStore.Audio.Media.MIME_TYPE, "audio/3gpp");
         values.put(MediaStore.Audio.Media.DATA, audioFile.getAbsolutePath());
         values.put(MediaStore.Audio.Media.IS_MUSIC, true);
-
-
-
-
         ContentResolver contentResolver = getContentResolver();
         Log.d(TAG, "audioFile: " + audioFile.canRead());
         Uri baseUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
         Uri newUri = contentResolver.insert(baseUri, values);
         audioUri = newUri;
-//        audioPath = audioFile.getAbsolutePath();
-        // оповещение системы о новом файле
         sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, newUri));
     }
 
-    public void onClickPlayRecord(View view) throws IOException {
-        MediaPlayer mp = new MediaPlayer();
-        mp.setDataSource(this,audioUri);
-        mp.prepare();
-        mp.start();
-        startService(new Intent(MainActivity.this, PlayRecordService.class));
+    public void onClickPlayRecord(View view){
+        Intent intent = new Intent(MainActivity.this, PlayRecordService.class);
+        intent.putExtra("path",audioFile.getAbsolutePath());
+        startService(intent);
     }
 
 

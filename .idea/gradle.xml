@@ -41,6 +41,11 @@
             <option value="$PROJECT_DIR$/practice5/audiorecord" />
             <option value="$PROJECT_DIR$/practice5/camera" />
             <option value="$PROJECT_DIR$/practice5/sensorlist" />
+            <option value="$PROJECT_DIR$/practice6" />
+            <option value="$PROJECT_DIR$/practice6/internalfilestorage" />
+            <option value="$PROJECT_DIR$/practice6/notebook" />
+            <option value="$PROJECT_DIR$/practice6/preferences" />
+            <option value="$PROJECT_DIR$/practice6/room" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

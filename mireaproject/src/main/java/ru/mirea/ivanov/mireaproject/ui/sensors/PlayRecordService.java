@@ -1,14 +1,17 @@
 package ru.mirea.ivanov.mireaproject.ui.sensors;
 
+import static ru.mirea.ivanov.mireaproject.MainActivity.preferences;
+
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
 
-import ru.mirea.ivanov.mireaproject.R;
+import java.io.IOException;
 
 public class PlayRecordService extends Service {
     private MediaPlayer mediaPlayer;
+    private int id;
 
     public PlayRecordService() {
     }
@@ -20,20 +23,33 @@ public class PlayRecordService extends Service {
     }
 
     @Override
-    public void onCreate(){
-        mediaPlayer=MediaPlayer.create(this, R.raw.music);
-        mediaPlayer.setLooping(false);
+    public void onCreate() {
     }
 
     @Override
-    public int onStartCommand(Intent intent, int flags, int startId){
-        if (mediaPlayer.isPlaying()) {
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        if (mediaPlayer!=null && mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
         } else {
+            mediaPlayer = new MediaPlayer();
+            mediaPlayer.setLooping(preferences.getBoolean("SAVED_LOOPING_AUDIO", false));
+            try {
+                mediaPlayer.setDataSource(intent.getStringExtra("path"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                mediaPlayer.prepare();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             mediaPlayer.start();
         }
         return START_STICKY;
     }
+
+
+
     @Override
     public void onDestroy() {
         mediaPlayer.stop();

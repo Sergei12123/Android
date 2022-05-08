@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
             if (audioFile == null) {
                 // создание файла
                 audioFile = new File(this.getExternalFilesDir(
-                        Environment.DIRECTORY_MUSIC), "mirea.3gp");
+                        Environment.DIRECTORY_MUSIC), "someRecord.3gp");
             }
             mediaRecorder.setOutputFile(audioFile.getAbsolutePath());
             mediaRecorder.prepare();

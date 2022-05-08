@@ -9,14 +9,17 @@
         <entry key="..\:/Study/Android/mireaproject/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/activity_main.xml" value="0.20471014492753623" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/activity_new_history.xml" value="0.25" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/app_bar_main.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/calculator_fragment.xml" value="0.2115036231884058" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/content_main.xml" value="0.18072916666666666" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_browser.xml" value="0.25" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_gallery.xml" value="0.20471014492753623" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_history.xml" value="0.1793478260869565" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_home.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_music_player.xml" value="0.33" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_sensors.xml" value="0.22" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_settings.xml" value="0.33" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_slideshow.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/nav_header_main.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/menu/activity_main_drawer.xml" value="0.3" />
@@ -61,6 +64,10 @@
         <entry key="..\:/Study/Android/practice5/camera/src/main/res/layout/activity_main.xml" value="0.14722222222222223" />
         <entry key="..\:/Study/Android/practice5/camera/src/main/res/xml/paths.xml" value="0.17831813576494426" />
         <entry key="..\:/Study/Android/practice5/sensorlist/src/main/res/layout/activity_main.xml" value="0.2056159420289855" />
+        <entry key="..\:/Study/Android/practice6/internalfilestorage/src/main/res/layout/activity_main.xml" value="0.2617753623188406" />
+        <entry key="..\:/Study/Android/practice6/notebook/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Study/Android/practice6/preferences/src/main/res/layout/activity_main.xml" value="0.17831813576494426" />
+        <entry key="..\:/Study/Android/practice6/room/src/main/res/layout/activity_main.xml" value="0.18115942028985507" />
       </map>
     </option>
   </component>

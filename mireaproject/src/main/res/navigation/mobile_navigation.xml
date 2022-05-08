@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_browser">
+    app:startDestination="@+id/nav_settings">
 
     <fragment
         android:id="@+id/nav_browser"
@@ -28,4 +28,16 @@
         android:name="ru.mirea.ivanov.mireaproject.ui.sensors.SensorsFragment"
         android:label="@string/sensors"
         tools:layout="@layout/fragment_sensors" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="ru.mirea.ivanov.mireaproject.ui.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="ru.mirea.ivanov.mireaproject.ui.history.HistoryFragment"
+        android:label="@string/history"
+        tools:layout="@layout/fragment_history" />
 </navigation>

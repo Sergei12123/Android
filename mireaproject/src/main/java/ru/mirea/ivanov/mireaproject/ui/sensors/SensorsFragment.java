@@ -46,8 +46,9 @@ public class SensorsFragment extends Fragment {
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.RECORD_AUDIO
     };
-    public static SensorsFragment getInstance(){
-        if(instance==null) instance= new SensorsFragment();
+
+    public static SensorsFragment getInstance() {
+        if (instance == null) instance = new SensorsFragment();
         return instance;
     }
 
@@ -61,7 +62,7 @@ public class SensorsFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentSensorsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        instance=this;
+        instance = this;
         textViewAccelerometer1 = root.findViewById(R.id.textViewAccelerometer1);
         textViewAccelerometer2 = root.findViewById(R.id.textViewAccelerometer2);
         textViewMagnetic = root.findViewById(R.id.textViewMagnetic);
@@ -108,6 +109,7 @@ public class SensorsFragment extends Fragment {
                     && grantResults[0] == PackageManager.PERMISSION_GRANTED;
         }
     }
+
     public static boolean hasPermissions(Context context, String... permissions) {
         if (context != null && permissions != null) {
             for (String permission : permissions) {
@@ -118,7 +120,6 @@ public class SensorsFragment extends Fragment {
         }
         return true;
     }
-
 
 
 }

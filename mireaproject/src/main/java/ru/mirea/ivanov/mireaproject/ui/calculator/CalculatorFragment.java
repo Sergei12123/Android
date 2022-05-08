@@ -1,5 +1,7 @@
 package ru.mirea.ivanov.mireaproject.ui.calculator;
 
+import static ru.mirea.ivanov.mireaproject.MainActivity.preferences;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,7 +59,7 @@ public class CalculatorFragment extends Fragment {
                 break;
             case "razdelit":
                 if (param2 == 0) {
-                    Toast.makeText(getActivity(), "Делить на ноль нельзя!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), preferences.getString("SAVED_CALCULATE_WRONG", "Делить на ноль нельзя!"), Toast.LENGTH_LONG).show();
                     editText.setText(param1.toString());
                     return;
                 }
