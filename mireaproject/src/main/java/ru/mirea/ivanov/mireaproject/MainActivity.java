@@ -1,5 +1,7 @@
 package ru.mirea.ivanov.mireaproject;
 
+import static ru.mirea.ivanov.mireaproject.ui.login.LoginActivity.mAuth;
+
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -18,6 +20,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -41,6 +44,7 @@ import java.io.IOException;
 
 import ru.mirea.ivanov.mireaproject.databinding.ActivityMainBinding;
 import ru.mirea.ivanov.mireaproject.ui.history.NewHistory;
+import ru.mirea.ivanov.mireaproject.ui.login.LoginActivity;
 import ru.mirea.ivanov.mireaproject.ui.musicplayer.PlayerService;
 import ru.mirea.ivanov.mireaproject.ui.sensors.PlayRecordService;
 import ru.mirea.ivanov.mireaproject.ui.sensors.SensorsFragment;
@@ -106,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 R.id.nav_music_player,
                 R.id.nav_sensors,
                 R.id.nav_settings,
+                R.id.nav_weather,
                 R.id.nav_history)
                 .setOpenableLayout(drawer)
                 .build();
@@ -225,10 +230,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
             mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
             mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-            audioPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/mirea"+numberOfRecord+".3gp";
+            audioPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/mirea" + numberOfRecord + ".3gp";
             if (audioFile == null) {
                 audioFile = new File(this.getExternalFilesDir(
-                        Environment.DIRECTORY_MUSIC), "mirea"+numberOfRecord+".3gp");
+                        Environment.DIRECTORY_MUSIC), "mirea" + numberOfRecord + ".3gp");
             }
             mediaRecorder.setOutputFile(audioFile.getAbsolutePath());
             mediaRecorder.prepare();
@@ -253,7 +258,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         Log.d(TAG, "processAudioFile");
         ContentValues values = new ContentValues(4);
         long current = System.currentTimeMillis();
-        values.put(MediaStore.Audio.Media.TITLE, "audio"+numberOfRecord + audioFile.getName());
+        values.put(MediaStore.Audio.Media.TITLE, "audio" + numberOfRecord + audioFile.getName());
         values.put(MediaStore.Audio.Media.DATE_ADDED, (int) (current / 1000));
         values.put(MediaStore.Audio.Media.MIME_TYPE, "audio/3gpp");
         values.put(MediaStore.Audio.Media.DATA, audioFile.getAbsolutePath());
@@ -266,11 +271,16 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, newUri));
     }
 
-    public void onClickPlayRecord(View view){
+    public void onClickPlayRecord(View view) {
         Intent intent = new Intent(MainActivity.this, PlayRecordService.class);
-        intent.putExtra("path",audioFile.getAbsolutePath());
+        intent.putExtra("path", audioFile.getAbsolutePath());
         startService(intent);
     }
 
-
+    public void onClickLogOut(MenuItem item) {
+        mAuth.signOut();
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        this.finish();
+    }
 }

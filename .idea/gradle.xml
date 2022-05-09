@@ -46,6 +46,10 @@
             <option value="$PROJECT_DIR$/practice6/notebook" />
             <option value="$PROJECT_DIR$/practice6/preferences" />
             <option value="$PROJECT_DIR$/practice6/room" />
+            <option value="$PROJECT_DIR$/practice7" />
+            <option value="$PROJECT_DIR$/practice7/firebaseauth" />
+            <option value="$PROJECT_DIR$/practice7/httpurlconnection" />
+            <option value="$PROJECT_DIR$/practice7/socketconnection" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
