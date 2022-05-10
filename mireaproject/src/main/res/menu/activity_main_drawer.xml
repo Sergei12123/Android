@@ -36,5 +36,9 @@
             android:id="@+id/nav_map"
             android:icon="@drawable/search_layer_pin_selected_default"
             android:title="@string/yandex_map" />
+        <item
+            android:id="@+id/nav_history_delay"
+            android:icon="@android:drawable/ic_lock_idle_low_battery"
+            android:title="@string/history_delay" />
     </group>
 </menu>

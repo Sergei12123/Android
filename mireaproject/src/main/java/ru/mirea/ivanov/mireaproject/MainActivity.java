@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 R.id.nav_settings,
                 R.id.nav_weather,
                 R.id.nav_map,
+                R.id.nav_history_delay,
                 R.id.nav_history)
                 .setOpenableLayout(drawer)
                 .build();
@@ -145,8 +146,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     protected void onStop() {
         // Вызов onStart нужно передавать инстансам MapView и MapKit.
         super.onStop();
-        mapView.onStop();
+        if(mapView!=null) {
+            mapView.onStop();
+        }
         MapKitFactory.getInstance().onStop();
+
     }
 
     @Override

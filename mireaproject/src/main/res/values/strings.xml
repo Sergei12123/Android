@@ -39,5 +39,6 @@
     <string name="unknown_error_message">Неизвестная ошибка</string>
     <string name="network_error_message">Проблемы с соединением</string>
     <string name="remote_error_message">Проблемы с поиском</string>
+    <string name="history_delay">History Delay</string>
 
 </resources>

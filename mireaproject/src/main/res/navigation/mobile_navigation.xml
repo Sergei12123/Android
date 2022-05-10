@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_map">
+    app:startDestination="@+id/nav_history_delay">
 
     <fragment
         android:id="@+id/nav_browser"
@@ -52,4 +52,10 @@
         android:name="ru.mirea.ivanov.mireaproject.ui.map.YandexMapFragment"
         android:label="@string/yandex_map"
         tools:layout="@layout/fragment_yandex_map" />
+
+    <fragment
+        android:id="@+id/nav_history_delay"
+        android:name="ru.mirea.ivanov.mireaproject.ui.historyDelay.NewHistoryDelayFragment"
+        android:label="@string/history_delay"
+        tools:layout="@layout/fragment_new_history_delay" />
 </navigation>

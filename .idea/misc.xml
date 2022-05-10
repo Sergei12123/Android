@@ -20,6 +20,7 @@
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_history.xml" value="0.1793478260869565" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_home.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_music_player.xml" value="0.33" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_new_history_delay.xml" value="0.36666666666666664" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_sensors.xml" value="0.22" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_settings.xml" value="0.33" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_slideshow.xml" value="0.20471014492753623" />
@@ -75,6 +76,9 @@
         <entry key="..\:/Study/Android/practice7/firebaseauth/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Study/Android/practice7/httpurlconnection/src/main/res/layout/activity_main.xml" value="0.17147922998986828" />
         <entry key="..\:/Study/Android/practice7/socketconnection/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Study/Android/practice8/livedata/src/main/res/layout/activity_main.xml" value="0.13645833333333332" />
+        <entry key="..\:/Study/Android/practice8/networkstate/src/main/res/layout/activity_main.xml" value="0.14673913043478262" />
+        <entry key="..\:/Study/Android/practice8/viewmodel/src/main/res/layout/activity_main.xml" value="0.14673913043478262" />
       </map>
     </option>
   </component>
