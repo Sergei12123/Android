@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_weather">
+    app:startDestination="@+id/nav_map">
 
     <fragment
         android:id="@+id/nav_browser"
@@ -46,4 +46,10 @@
         android:name="ru.mirea.ivanov.mireaproject.ui.weather.WeatherFragment"
         android:label="@string/weather"
         tools:layout="@layout/fragment_weather" />
+
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="ru.mirea.ivanov.mireaproject.ui.map.YandexMapFragment"
+        android:label="@string/yandex_map"
+        tools:layout="@layout/fragment_yandex_map" />
 </navigation>

@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Study/Android/intentfilter/src/main/res/layout/activity_main.xml" value="0.2418478260869565" />
+        <entry key="..\:/Study/Android/laboratory1/yandexmaps/src/main/res/layout/activity_main.xml" value="0.21" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/drawable/ic_menu_camera.xml" value="0.1" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/drawable/ic_menu_gallery.xml" value="0.1" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1" />
@@ -23,6 +24,7 @@
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_settings.xml" value="0.33" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_slideshow.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_weather.xml" value="0.33" />
+        <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/fragment_yandex_map.xml" value="0.17831813576494426" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/layout/nav_header_main.xml" value="0.20471014492753623" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/menu/activity_main_drawer.xml" value="0.3" />
         <entry key="..\:/Study/Android/mireaproject/src/main/res/menu/main.xml" value="0.3" />

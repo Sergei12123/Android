@@ -32,5 +32,9 @@
             android:id="@+id/nav_weather"
             android:icon="?android:attr/textSelectHandle"
             android:title="@string/weather" />
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/search_layer_pin_selected_default"
+            android:title="@string/yandex_map" />
     </group>
 </menu>

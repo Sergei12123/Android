@@ -11,6 +11,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/laboratory1" />
+            <option value="$PROJECT_DIR$/laboratory1/googlemaps" />
+            <option value="$PROJECT_DIR$/laboratory1/yandexdriver" />
+            <option value="$PROJECT_DIR$/laboratory1/yandexmaps" />
             <option value="$PROJECT_DIR$/mireaproject" />
             <option value="$PROJECT_DIR$/practice1" />
             <option value="$PROJECT_DIR$/practice1/task5" />

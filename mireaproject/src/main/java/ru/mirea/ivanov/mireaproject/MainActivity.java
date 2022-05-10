@@ -38,6 +38,10 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
+import com.yandex.mapkit.MapKitFactory;
+import com.yandex.mapkit.directions.DirectionsFactory;
+import com.yandex.mapkit.mapview.MapView;
+import com.yandex.mapkit.search.SearchFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -71,19 +75,28 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     public static SharedPreferences preferences;
 
+    private final String MAPKIT_API_KEY = "d5270e00-7bb1-4b08-be8d-f82e40afde66";
+
     final String SAVED_LOOPING_AUDIO = "SAVED_LOOPING_AUDIO";
 
     final String SAVED_ADDRESS = "SAVED_ADDRESS";
 
     final String SAVED_CALCULATE_WRONG = "SAVED_CALCULATE_WRONG";
 
-
+    public static MapView mapView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        MapKitFactory.setApiKey(MAPKIT_API_KEY);
+        MapKitFactory.initialize(this);
+        SearchFactory.initialize(this);
+        DirectionsFactory.initialize(this);
+
         preferences = getPreferences(MODE_PRIVATE);
 
         mediaRecorder = new MediaRecorder();
+
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -111,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 R.id.nav_sensors,
                 R.id.nav_settings,
                 R.id.nav_weather,
+                R.id.nav_map,
                 R.id.nav_history)
                 .setOpenableLayout(drawer)
                 .build();
@@ -118,12 +132,21 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    protected void onStop() {
+        // Вызов onStart нужно передавать инстансам MapView и MapKit.
+        super.onStop();
+        mapView.onStop();
+        MapKitFactory.getInstance().onStop();
     }
 
     @Override
